@@ -1,0 +1,11 @@
+backend:
+  name: bitbucket
+  repo: bitext/api_bitext_ayuda # Path to your Github repository
+  branch: master # Branch to update
+  publish_mode: editorial_workflow
+  media_folder: "/source/admin/images/uploads" # Media files will be stored in the repo under images/uploads
+  collections:
+    - name: ""
+      label: "API Bitext Reference"
+      folder: "/source/"
+      create: false
