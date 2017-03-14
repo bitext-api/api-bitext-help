@@ -67,7 +67,7 @@ html, body {
   bottom: 0;
   width: $nav-width;
   background-color: $nav-bg;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: bold;
 
   // language selector for mobile devices
@@ -82,7 +82,10 @@ html, body {
   // This is the logo at the top of the ToC
   &>img {
     display: block;
-    max-width: 100%;
+    padding: 10px 0;
+    margin: 0 auto;
+    max-width: 150px;
+    border-bottom: 1px solid $lineas;
   }
 
   &>.search {
@@ -128,7 +131,7 @@ html, body {
       margin-bottom: 1em;
     }
 
-    @include embossed-bg;
+    // @include embossed-bg;
 
     li {
       margin: 1em $nav-padding;
@@ -161,7 +164,7 @@ html, body {
     list-style: none;
     margin: 0;
     padding: 0;
-    line-height: 28px;
+    line-height: 34px;
   }
 
   li {
@@ -173,24 +176,25 @@ html, body {
 
   // This is the currently selected ToC entry
   .tocify-focus {
-    box-shadow: 0px 1px 0px $nav-active-shadow;
-    background-color: $nav-active-bg;
+    // box-shadow: 0px 1px 0px $nav-active-shadow;
+    // background-color: $nav-active-bg;
     color: $nav-active-text;
+    font-weight: bold;
   }
 
   // Subheaders are the submenus that slide open
   // in the table of contents.
   .tocify-subheader {
-    display: none; // tocify will override this when needed
+    // display: none; // tocify will override this when needed
     background-color: $nav-subitem-bg;
     font-weight: 500;
     .tocify-item>a {
       padding-left: $nav-padding + $nav-indent;
-      font-size: 12px;
+      font-size: 14px;
     }
 
     // for embossed look:
-    @include embossed-bg;
+    // @include embossed-bg;
     &>li:last-child {
       box-shadow: none; // otherwise it'll overflow out of the subheader
     }
@@ -198,11 +202,12 @@ html, body {
 
   .toc-footer {
     padding: 1em 0;
-    margin-top: 1em;
-    border-top: 1px dashed $nav-footer-border-color;
+    margin-top: 3rem;
+    border-top: 1px solid $lineas;
+    // border-top: 1px dashed $nav-footer-border-color;
 
     li,a {
-      color: $nav-text;
+      color: rgb(196,196,196);
       text-decoration: none;
     }
 
@@ -211,7 +216,7 @@ html, body {
     }
 
     li {
-      font-size: 0.8em;
+      font-size: 0.7em;
       line-height: 1.7;
       text-decoration: none;
     }
@@ -328,6 +333,9 @@ html, body {
   position: relative;
   z-index: 30;
 
+  border-left: 1px solid $lineas;
+  border-right: 1px solid $lineas;
+
   &:after {
     content: '';
     display: block;
@@ -339,7 +347,7 @@ html, body {
     padding: 0 $main-padding;
     box-sizing: border-box;
     display: block;
-    text-shadow: $main-embossed-text-shadow;
+    // text-shadow: $main-embossed-text-shadow;
 
     @extend %left-col;
   }
@@ -355,14 +363,15 @@ html, body {
 
   h1 {
     @extend %header-font;
-    font-size: 30px;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    border-bottom: 1px solid #ccc;
+    font-size: 33px;
+    padding-top: 1.2rem;
+    padding-bottom: 1rem;
+    // border-bottom: 1px solid #ccc;
     margin-bottom: $h1-margin-bottom;
-    margin-top: 2em;
-    border-top: 1px solid #ddd;
-    background-image: linear-gradient(to bottom, #fff, #f9f9f9);
+    margin-top: 3rem;
+    // border-top: 1px solid #ddd;
+    // background-color: $rojo-bitext;
+    // background-image: linear-gradient(to bottom, #fff, #f9f9f9);
   }
 
   h1:first-child, div:first-child + h1 {
@@ -372,13 +381,14 @@ html, body {
 
   h2 {
     @extend %header-font;
-    font-size: 20px;
-    margin-top: 4em;
+    font-size: 23px;
+    margin-top: 2rem;
     margin-bottom: 0;
-    border-top: 1px solid #ccc;
+    // border-top: 1px solid #ccc;
     padding-top: 1.2em;
     padding-bottom: 1.2em;
-    background-image: linear-gradient(to bottom, rgba(#fff, 0.4), rgba(#fff, 0));
+    // background-color: #f0e1e1;
+    // background-image: linear-gradient(to bottom, rgba(#f0e1e1,.4), rgba(#fff, 0));
   }
 
   // h2s right after h1s should bump right up
@@ -397,6 +407,10 @@ html, body {
 
   h4, h5, h6 {
     font-size: 10px;
+  }
+
+  h4 {
+    font-size: 12px;
   }
 
   hr {
@@ -452,6 +466,8 @@ html, body {
 
   img {
     max-width: 100%;
+    display: block;
+    margin: 4rem auto;
   }
 
   code {
@@ -465,6 +481,7 @@ html, body {
   pre>code {
     background-color: transparent;
     padding: 0;
+    white-space:pre;
   }
 
   aside {
@@ -525,7 +542,7 @@ html, body {
     background-color: $code-bg;
     color: #fff;
 
-    padding: 2em $main-padding;
+    padding: 1.5em 12px;
     margin: 0;
     width: $examples-width;
 
@@ -556,8 +573,8 @@ html, body {
       border-radius: 5px;
       padding: $code-annotation-padding;
       color: #ccc;
-      border-top: 1px solid #000;
-      border-bottom: 1px solid #404040;
+      // border-top: 1px solid #000;
+      // border-bottom: 1px solid #404040;
     }
   }
 }

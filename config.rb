@@ -44,6 +44,19 @@ configure :build do
   # activate :gzip
 end
 
+activate :deploy do |deploy|
+  deploy.deploy_method = :rsync
+  deploy.host          = 'root@144.76.201.7'
+  deploy.path          = '/root/repos/api_btx_ayuda_dev/'
+  # Optional Settings
+  deploy.user  = 'root' # no default
+  # deploy.port  = 5309 # ssh port, default: 22
+  # deploy.clean = true # remove orphaned files on remote host, default: false
+  # deploy.flags = '-rltgoDvzO --no-p --del' # add custom flags, default: -avz
+end
+
+activate :livereload
+
 # Deploy Configuration
 # If you want Middleman to listen on a different port, you can set that below
 set :port, 4567

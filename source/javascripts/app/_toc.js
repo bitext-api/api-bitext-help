@@ -15,13 +15,16 @@
       selectors: 'h1, h2',
       extendPage: false,
       theme: 'none',
-      smoothScroll: false,
-      showEffectSpeed: 0,
-      hideEffectSpeed: 180,
+      smoothScroll: true,
+      smoothScrollSpeed: 'fast',
+      // showEffectSpeed: 180,
+      // hideEffectSpeed: 180,
       ignoreSelector: '.toc-ignore',
       highlightOffset: 60,
-      scrollTo: -1,
+      scrollTo: 10,
       scrollHistory: true,
+      showAndHide: false,
+      // showAndHideOnScroll: false,
       hashGenerator: function (text, element) {
         return element.prop('id');
       }
@@ -54,4 +57,3 @@
     });
   });
 })(window);
-
