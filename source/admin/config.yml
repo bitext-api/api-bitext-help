@@ -8,9 +8,15 @@ publish_mode: editorial_workflow
 media_folder: "source/images/uploads" # Media files will be stored in the repo under images/uploads
 
 collections:
-  - name: "apibtx"
-    label: "Help"
+  - name: "index"
+    label: "Index"
     folder: "source"
+    create: false
+    fields:
+      - {label: "API Reference", name: "API Reference", widget: "markdown"}
+  - name: "includes"
+    label: "Includes"
+    folder: "source/includes"
     create: false
     fields:
       - {label: "API Reference", name: "API Reference", widget: "markdown"}
