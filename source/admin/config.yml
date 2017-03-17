@@ -9,8 +9,8 @@ media_folder: "source/images/uploads" # Media files will be stored in the repo u
 
 collections:
   - name: "apibtx"
-    label: "API Bitext Index"
+    label: "Help"
     folder: "source"
     create: false
     fields:
-      - {label: "index", name: "API Reference", widget: "markdown"}
+      - {label: "API Reference", name: "API Reference", widget: "markdown"}
