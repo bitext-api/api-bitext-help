@@ -2,6 +2,7 @@
 title: API Reference
 
 language_tabs:
+  - shell: curl
   - perl
   - python
   - ruby
